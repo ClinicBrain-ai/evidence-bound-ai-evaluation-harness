@@ -1,0 +1,82 @@
+{
+  "report_id": "eval-case-002-v0.1.0",
+  "case_id": "case_002_unsupported_specificity",
+  "ai_output_id": "ai-output-case-002",
+  "evaluation_scope": "Synthetic reviewability evaluation of unsupported specificity and scope-boundary issues. This does not determine clinical correctness.",
+  "source_summary": "The source packet says a person asked about sensitivity near a recently repaired tooth, but it does not specify date, tooth number, severity, duration, exam findings, or imaging.",
+  "claim_evaluations": [
+    {
+      "claim_id": "claim-001",
+      "claim_text": "The person is experiencing sensitivity near a recently repaired tooth.",
+      "support_status": "supported",
+      "supporting_evidence": ["Synthetic note says the person asked about sensitivity near a recently repaired tooth."],
+      "evaluation_note": "The general sensitivity and recent repair relationship is supported."
+    },
+    {
+      "claim_id": "claim-002",
+      "claim_text": "The sensitivity is in tooth 14.",
+      "support_status": "unsupported",
+      "supporting_evidence": [],
+      "evaluation_note": "The source packet does not identify a tooth number."
+    },
+    {
+      "claim_id": "claim-003",
+      "claim_text": "The filling was completed last week.",
+      "support_status": "unsupported",
+      "supporting_evidence": [],
+      "evaluation_note": "The source packet does not state the repair date or procedure type."
+    },
+    {
+      "claim_id": "claim-004",
+      "claim_text": "This is likely expected after the recent repair.",
+      "support_status": "unsupported",
+      "supporting_evidence": [],
+      "evaluation_note": "The source packet does not provide criteria for expectedness and the output moves toward interpretation."
+    }
+  ],
+  "missing_context_flags": [
+    {
+      "field": "repair_date",
+      "status": "missing",
+      "reason": "The source packet does not include the date of the repair."
+    },
+    {
+      "field": "tooth_identifier",
+      "status": "missing",
+      "reason": "The source packet does not identify the tooth."
+    },
+    {
+      "field": "exam_or_imaging",
+      "status": "missing",
+      "reason": "The source packet contains no exam findings or imaging."
+    }
+  ],
+  "uncertainty_flags": [
+    {
+      "flag_id": "uncertainty-001",
+      "issue": "The output uses specific details and expectedness language without source support.",
+      "expected_uncertainty_handling": "Limit the summary to sensitivity near a recently repaired tooth and state that details are not provided.",
+      "evaluation_note": "The output should avoid unsupported specificity."
+    }
+  ],
+  "source_conflict_flags": [],
+  "scope_boundary_flags": [
+    {
+      "flag_id": "scope-001",
+      "boundary_issue": "The output implies a clinical interpretation by saying the sensitivity is likely expected.",
+      "severity": "high",
+      "evaluation_note": "Severity reflects workflow boundary overreach, not patient severity or medical risk."
+    }
+  ],
+  "human_review_routing": {
+    "review_required": true,
+    "routing_reason": "The output adds unsupported tooth number, date, procedure type, and expectedness language.",
+    "suggested_action": "reject_output"
+  },
+  "revision_guidance": {
+    "summary": "Replace specific unsupported details with source-bound language and identify absent details for reviewer awareness.",
+    "suggested_revision_focus": ["Remove tooth number.", "Remove repair timing.", "Remove expectedness language.", "Add missing-context notes."],
+    "not_clinical_advice": true
+  },
+  "safety_boundary": "This report evaluates reviewability and evidence alignment only. It does not diagnose, recommend treatment, assess medical safety, validate clinical correctness, or provide patient-facing advice."
+}

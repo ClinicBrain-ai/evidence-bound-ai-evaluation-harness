@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/evidence-bound-ai-evaluation-harness/schemas/evaluation_report.schema.json",
+  "title": "Evidence-Bound AI Evaluation Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "case_id",
+    "ai_output_id",
+    "evaluation_scope",
+    "source_summary",
+    "claim_evaluations",
+    "missing_context_flags",
+    "uncertainty_flags",
+    "source_conflict_flags",
+    "scope_boundary_flags",
+    "human_review_routing",
+    "revision_guidance",
+    "safety_boundary"
+  ],
+  "properties": {
+    "report_id": { "type": "string", "minLength": 1 },
+    "case_id": { "type": "string", "minLength": 1 },
+    "ai_output_id": { "type": "string", "minLength": 1 },
+    "evaluation_scope": { "type": "string", "minLength": 1 },
+    "source_summary": { "type": "string", "minLength": 1 },
+    "claim_evaluations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "claim_text",
+          "support_status",
+          "supporting_evidence",
+          "evaluation_note"
+        ],
+        "properties": {
+          "claim_id": { "type": "string", "minLength": 1 },
+          "claim_text": { "type": "string", "minLength": 1 },
+          "support_status": {
+            "type": "string",
+            "enum": ["supported", "partially_supported", "unsupported", "unclear"]
+          },
+          "supporting_evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "evaluation_note": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "missing_context_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "status", "reason"],
+        "properties": {
+          "field": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["missing", "present", "unknown", "not_applicable"]
+          },
+          "reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "uncertainty_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "flag_id",
+          "issue",
+          "expected_uncertainty_handling",
+          "evaluation_note"
+        ],
+        "properties": {
+          "flag_id": { "type": "string", "minLength": 1 },
+          "issue": { "type": "string", "minLength": 1 },
+          "expected_uncertainty_handling": { "type": "string", "minLength": 1 },
+          "evaluation_note": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "source_conflict_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "conflict_id",
+          "source_a",
+          "source_b",
+          "conflict_summary",
+          "evaluation_note"
+        ],
+        "properties": {
+          "conflict_id": { "type": "string", "minLength": 1 },
+          "source_a": { "type": "string", "minLength": 1 },
+          "source_b": { "type": "string", "minLength": 1 },
+          "conflict_summary": { "type": "string", "minLength": 1 },
+          "evaluation_note": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "scope_boundary_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["flag_id", "boundary_issue", "severity", "evaluation_note"],
+        "properties": {
+          "flag_id": { "type": "string", "minLength": 1 },
+          "boundary_issue": { "type": "string", "minLength": 1 },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "evaluation_note": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "human_review_routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["review_required", "routing_reason", "suggested_action"],
+      "properties": {
+        "review_required": { "type": "boolean" },
+        "routing_reason": { "type": "string", "minLength": 1 },
+        "suggested_action": {
+          "type": "string",
+          "enum": [
+            "accept_for_workflow_review",
+            "revise_before_review",
+            "reject_output",
+            "escalate_to_human_reviewer",
+            "pending"
+          ]
+        }
+      }
+    },
+    "revision_guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "suggested_revision_focus", "not_clinical_advice"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1 },
+        "suggested_revision_focus": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "not_clinical_advice": { "type": "boolean", "const": true }
+      }
+    },
+    "safety_boundary": { "type": "string", "minLength": 1 }
+  }
+}

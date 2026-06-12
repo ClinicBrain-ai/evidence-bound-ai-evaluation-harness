@@ -1,0 +1,63 @@
+{
+  "report_id": "eval-case-001-v0.1.0",
+  "case_id": "case_001_missing_context",
+  "ai_output_id": "ai-output-case-001",
+  "evaluation_scope": "Synthetic reviewability evaluation of evidence alignment, missing context, uncertainty handling, scope boundaries, and human-review routing. This does not determine clinical correctness.",
+  "source_summary": "The source packet reports mild gum soreness during a scheduling call but omits duration, exam findings, medication history, and imaging.",
+  "claim_evaluations": [
+    {
+      "claim_id": "claim-001",
+      "claim_text": "The person has mild gum soreness.",
+      "support_status": "supported",
+      "supporting_evidence": ["Synthetic intake summary reports mild gum soreness."],
+      "evaluation_note": "The symptom mention is supported by the source packet."
+    },
+    {
+      "claim_id": "claim-002",
+      "claim_text": "The concern should be handled as routine.",
+      "support_status": "unsupported",
+      "supporting_evidence": [],
+      "evaluation_note": "The source packet does not contain review criteria for routine handling."
+    }
+  ],
+  "missing_context_flags": [
+    {
+      "field": "symptom_duration",
+      "status": "missing",
+      "reason": "The source packet does not state how long the soreness has been present."
+    },
+    {
+      "field": "exam_findings",
+      "status": "missing",
+      "reason": "No exam findings are included in the source packet."
+    }
+  ],
+  "uncertainty_flags": [
+    {
+      "flag_id": "uncertainty-001",
+      "issue": "Output presents routine handling without acknowledging missing context.",
+      "expected_uncertainty_handling": "State that routing cannot be determined from the available source packet alone.",
+      "evaluation_note": "The output should preserve uncertainty created by absent review criteria."
+    }
+  ],
+  "source_conflict_flags": [],
+  "scope_boundary_flags": [
+    {
+      "flag_id": "scope-001",
+      "boundary_issue": "Workflow routing was asserted without source support.",
+      "severity": "medium",
+      "evaluation_note": "Severity reflects workflow review concern, not patient severity or medical risk."
+    }
+  ],
+  "human_review_routing": {
+    "review_required": true,
+    "routing_reason": "The output omits missing context and adds unsupported routine handling.",
+    "suggested_action": "revise_before_review"
+  },
+  "revision_guidance": {
+    "summary": "Revise the output to identify mild gum soreness while explicitly noting missing duration, exam findings, medication history, and imaging.",
+    "suggested_revision_focus": ["Remove unsupported routine-routing language.", "Add missing-context and uncertainty notes."],
+    "not_clinical_advice": true
+  },
+  "safety_boundary": "This report evaluates reviewability and evidence alignment only. It does not diagnose, recommend treatment, assess medical safety, validate clinical correctness, or provide patient-facing advice."
+}

@@ -1,0 +1,59 @@
+{
+  "report_id": "eval-case-003-v0.1.0",
+  "case_id": "case_003_source_conflict",
+  "ai_output_id": "ai-output-case-003",
+  "evaluation_scope": "Synthetic reviewability evaluation of source conflict handling. This does not determine clinical correctness.",
+  "source_summary": "One synthetic source says no medication allergies were reported, while another says allergy status was not confirmed. The source packet does not resolve the conflict.",
+  "claim_evaluations": [
+    {
+      "claim_id": "claim-001",
+      "claim_text": "The person has no medication allergies documented.",
+      "support_status": "partially_supported",
+      "supporting_evidence": ["Synthetic intake summary says no medication allergies were reported."],
+      "evaluation_note": "The claim is partially supported by one source but fails to reflect the conflicting transfer note."
+    }
+  ],
+  "missing_context_flags": [
+    {
+      "field": "source_reliability",
+      "status": "unknown",
+      "reason": "The source packet does not indicate which note should take priority."
+    }
+  ],
+  "uncertainty_flags": [
+    {
+      "flag_id": "uncertainty-001",
+      "issue": "The output states a clean conclusion despite unresolved source conflict.",
+      "expected_uncertainty_handling": "State that one source reports no medication allergies while another says allergy status was not confirmed.",
+      "evaluation_note": "The output should preserve the conflict for human review."
+    }
+  ],
+  "source_conflict_flags": [
+    {
+      "conflict_id": "conflict-001",
+      "source_a": "Synthetic intake summary: no medication allergies reported.",
+      "source_b": "Synthetic transfer note: allergy status not confirmed.",
+      "conflict_summary": "The available sources disagree or leave allergy status unresolved.",
+      "evaluation_note": "The AI output smooths over the unresolved conflict."
+    }
+  ],
+  "scope_boundary_flags": [
+    {
+      "flag_id": "scope-001",
+      "boundary_issue": "The output resolves a source conflict without source support.",
+      "severity": "medium",
+      "evaluation_note": "Severity reflects workflow conflict-handling concern, not patient severity or medical risk."
+    }
+  ],
+  "human_review_routing": {
+    "review_required": true,
+    "routing_reason": "The output hides an unresolved source conflict that should be visible to a reviewer.",
+    "suggested_action": "escalate_to_human_reviewer"
+  },
+  "revision_guidance": {
+    "summary": "Revise the output to show both source statements and mark allergy status as unresolved in the source packet.",
+    "suggested_revision_focus": ["Preserve both source statements.", "Do not resolve the conflict.", "Route to human review."],
+    "not_clinical_advice": true
+  },
+  "safety_boundary": "This report evaluates reviewability and evidence alignment only. It does not diagnose, recommend treatment, assess medical safety, validate clinical correctness, or provide patient-facing advice."
+}
