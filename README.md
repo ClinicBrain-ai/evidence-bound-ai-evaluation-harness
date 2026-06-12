@@ -2,6 +2,18 @@
 
 Evidence-Bound AI Evaluation Harness is a portfolio-grade prototype for evaluating AI-generated healthcare-adjacent outputs against source evidence, missing context, uncertainty handling, scope boundaries, and human-review needs.
 
+## 60-Second View
+
+- Reviews AI outputs against bounded source packets.
+- Flags unsupported claims, missing context, omitted uncertainty, source conflicts, and scope-boundary issues.
+- Produces schema-validated evaluation reports for human-review routing.
+- Uses only synthetic examples.
+- Evaluates reviewability and evidence alignment, not clinical correctness.
+
+## Hiring Signal
+
+This project demonstrates practical AI evaluation judgment for healthcare-adjacent workflows: claim-level review, evidence alignment, uncertainty handling, failure taxonomy design, human-review routing, and safety-boundary discipline.
+
 ## Why This Exists
 
 AI-generated healthcare-adjacent text can sound fluent and confident even when it is only partly grounded in source material. This project creates a structured, safety-bounded way to review whether an output is evidence-aligned, appropriately uncertain, scoped to the workflow, and ready for human review.
@@ -56,9 +68,15 @@ The existing `evidence-bound-clinical-review-toolkit` project focuses on convert
 
 This project focuses on the layer before that: evaluating the AI output to identify unsupported claims, missing context, uncertainty gaps, source conflicts, scope-boundary issues, and review needs.
 
-Conceptual flow:
+```text
+AI-generated output
+  -> Evidence-Bound AI Evaluation Harness
+  -> evaluation report: unsupported claims / missing context / source conflicts / scope flags
+  -> Clinical Review Packet
+  -> human review decision + audit trail
+```
 
-AI-generated output -> Evidence-Bound AI Evaluation Harness -> evaluation report -> Clinical Review Packet -> human review decision + audit trail
+In short: this repository evaluates whether an AI output is ready to become a review packet; the toolkit turns bounded material into the packet reviewers inspect.
 
 ## Test Instructions
 

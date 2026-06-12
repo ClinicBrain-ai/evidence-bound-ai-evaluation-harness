@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.1 - 2026-06-12
+
+- Added first-screen README summary for faster portfolio review.
+- Added a concise Hiring Signal section.
+- Refined the Clinical Review Packet Toolkit relationship into a simple flow block.
+- Added LinkedIn Featured title and description to portfolio blurb docs.
+- No runtime behavior added.
+- No CLI added.
+- No clinical, diagnostic, treatment, HIPAA, production, compliance, or medical-device claims added.
+
 ## v0.1.0 - 2026-06-12
 
 - Created repository foundation.

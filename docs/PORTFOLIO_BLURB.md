@@ -4,6 +4,12 @@
 
 Evidence-Bound AI Evaluation Harness is a portfolio-grade prototype for evaluating AI-generated healthcare-adjacent outputs against bounded source evidence, missing context, uncertainty handling, source conflicts, scope boundaries, and human-review routing. It focuses on reviewability and evidence alignment, not clinical correctness, diagnosis, treatment recommendation, medical safety validation, HIPAA compliance, production readiness, or medical-device functionality.
 
+## LinkedIn Featured
+
+Title: Evidence-Bound AI Evaluation Harness
+
+Description: Portfolio project for evaluating AI-generated healthcare-adjacent outputs against source evidence, missing context, uncertainty, source conflicts, scope boundaries, and human-review needs. Uses synthetic examples only and does not validate clinical correctness.
+
 ## Short GitHub Description
 
 Portfolio-grade evaluation harness for evidence alignment, uncertainty, scope boundaries, and human-review routing in healthcare-adjacent AI outputs.
