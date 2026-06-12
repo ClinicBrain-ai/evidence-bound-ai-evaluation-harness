@@ -8,6 +8,7 @@
 - Added console script `evidence-bound-eval`.
 - Added CLI tests for valid report, schema failure, missing file, invalid JSON, missing schema, input-file preservation, subprocess module execution, and scope language.
 - Added CLI implementation documentation.
+- Added v0.2.0 release-readiness draft in `docs/RELEASE_DRAFT_V0_2_0.md`.
 - Existing schema validation tests continue to pass.
 - Runtime behavior added: local schema validation only.
 - No clinical correctness validation added.

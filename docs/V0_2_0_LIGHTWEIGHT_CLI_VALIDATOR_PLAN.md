@@ -22,7 +22,7 @@ Optional future packaged entry point:
 evidence-bound-eval validate path/to/evaluation_report.json
 ```
 
-These commands are not implemented yet. This document is planning-only.
+At the time this plan was written, these commands were not implemented yet. The commands are now implemented in v0.2.0 as a local single-report schema validator.
 
 ## What The CLI Should Validate
 
@@ -128,7 +128,7 @@ evidence_bound_ai_evaluation_harness/
 └── cli.py
 ```
 
-This structure should not be created during this planning gate.
+This structure was not created during the planning gate. It was created later during the v0.2.0 implementation gate.
 
 Tests could later be added under:
 
@@ -147,7 +147,7 @@ tests/test_cli_validator.py
 - CLI does not modify input files.
 - All existing schema tests continue to pass.
 
-These tests are documentation-only in this planning gate.
+These tests were documentation-only in the planning gate. They were added later during the v0.2.0 implementation gate.
 
 ## Safety Boundary For CLI
 
@@ -196,6 +196,6 @@ It must not be described as:
 
 ## Recommended Next Gate
 
-Recommended next gate: `v0.2.0 Lightweight CLI Validator Implementation Gate`
+Recommended next gate after implementation: `v0.2.0 CLI Release Readiness Gate`
 
-Implementation should only begin after reviewing this plan.
+The implementation gate began after reviewing this plan and is now complete in v0.2.0.

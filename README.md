@@ -85,6 +85,7 @@ The schema does not validate clinical correctness, diagnosis, treatment, medical
 
 - [v0.2.0 Lightweight CLI Validator Plan](docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_PLAN.md) - planning document for the local schema validator CLI.
 - [v0.2.0 Lightweight CLI Validator Implementation](docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_IMPLEMENTATION.md) - implementation notes and command behavior.
+- [v0.2.0 Release Draft](docs/RELEASE_DRAFT_V0_2_0.md) - release notes for the lightweight local CLI validator.
 
 ## CLI Validator
 
