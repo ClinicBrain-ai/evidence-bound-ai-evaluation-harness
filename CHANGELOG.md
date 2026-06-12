@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.3 - 2026-06-12
+
+- Added a reviewer journey section to the README.
+- Added a walkthrough index for the three synthetic examples.
+- Added a plain-language note explaining why schema validation matters.
+- Kept positioning within reviewability, evidence alignment, and human-review workflow.
+- No runtime behavior added.
+- No CLI added.
+- No clinical, diagnostic, treatment, HIPAA, production, compliance, or medical-device claims added.
+
 ## v0.1.2 - 2026-06-12
 
 - Added reciprocal relationship language linking this harness to the Clinical Review Packet Toolkit.

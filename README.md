@@ -14,6 +14,19 @@ Evidence-Bound AI Evaluation Harness is a portfolio-grade prototype for evaluati
 
 This project demonstrates practical AI evaluation judgment for healthcare-adjacent workflows: claim-level review, evidence alignment, uncertainty handling, failure taxonomy design, human-review routing, and safety-boundary discipline.
 
+## Reviewer Journey
+
+A hiring manager, reviewer, or product team can read this repo as a small workflow story:
+
+1. Start with a bounded synthetic source packet.
+2. Compare it with a plausible AI-generated output.
+3. Inspect the evaluation report to see which claims are supported, unsupported, missing context, uncertainty-sensitive, conflict-sensitive, or outside workflow scope.
+4. Use human-review routing to decide whether the output should be revised, rejected, escalated, accepted for workflow review, or left pending.
+
+Before the harness, a reviewer sees fluent text and has to manually infer what is grounded, missing, uncertain, or out of scope.
+
+After the harness, a reviewer sees a structured report that separates source-supported claims from review issues and keeps workflow routing visible.
+
 ## Why This Exists
 
 AI-generated healthcare-adjacent text can sound fluent and confident even when it is only partly grounded in source material. This project creates a structured, safety-bounded way to review whether an output is evidence-aligned, appropriately uncertain, scoped to the workflow, and ready for human review.
@@ -60,7 +73,15 @@ Source packet -> AI-generated output -> Claim/evidence review -> Missing context
 - `case_002_unsupported_specificity`: output becomes more specific than the source supports.
 - `case_003_source_conflict`: source conflict is smoothed over by the AI output.
 
+See [docs/WALKTHROUGH_INDEX.md](docs/WALKTHROUGH_INDEX.md) for a simple guide to the three case walkthroughs.
+
 All examples are synthetic, de-identified, and healthcare-adjacent or dental-adjacent. They are not clinical cases and do not use real patient data.
+
+## Why Schema Validation Matters
+
+Schema validation makes the evaluation report reviewable as a consistent artifact. It checks that each synthetic report includes the expected workflow fields, allowed labels, routing values, and safety-boundary metadata.
+
+The schema does not validate clinical correctness, diagnosis, treatment, medical safety, compliance, production readiness, or medical-device functionality.
 
 ## Relationship To Clinical Review Packet Toolkit
 
