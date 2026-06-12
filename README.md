@@ -83,6 +83,8 @@ Schema validation makes the evaluation report reviewable as a consistent artifac
 
 The schema does not validate clinical correctness, diagnosis, treatment, medical safety, compliance, production readiness, or medical-device functionality.
 
+- [v0.2.0 Lightweight CLI Validator Plan](docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_PLAN.md) - planning document for a future local schema validator CLI; not implemented yet.
+
 ## Release Readiness
 
 See [docs/RELEASE_DRAFT_V0_1_X.md](docs/RELEASE_DRAFT_V0_1_X.md) for a GitHub release-note draft and release safety boundary for the v0.1.x foundation.

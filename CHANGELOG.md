@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.6 - Lightweight CLI Validator Planning
+
+- Added `docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_PLAN.md`.
+- Documented planned CLI command shape, validation scope, output behavior, exit code plan, implementation boundaries, future tests, and safety boundary.
+- Linked the planning document from README.
+- No CLI implemented.
+- No runtime behavior added.
+- No schema behavior changed.
+- No clinical, diagnostic, treatment, HIPAA, production, compliance, or medical-device claims added.
+
 ## v0.1.5 - Portfolio Publication Record
 
 - Added `docs/PORTFOLIO_PUBLICATION_RECORD.md`.

@@ -1,6 +1,6 @@
 [project]
 name = "evidence-bound-ai-evaluation-harness"
-version = "0.1.5"
+version = "0.1.6"
 description = "Portfolio-grade prototype for evaluating AI-generated healthcare-adjacent outputs against source evidence and reviewability criteria."
 readme = "README.md"
 license = "MIT"
