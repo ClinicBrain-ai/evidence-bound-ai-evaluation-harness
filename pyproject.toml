@@ -1,6 +1,10 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "evidence-bound-ai-evaluation-harness"
-version = "0.1.6"
+version = "0.2.0"
 description = "Portfolio-grade prototype for evaluating AI-generated healthcare-adjacent outputs against source evidence and reviewability criteria."
 readme = "README.md"
 license = "MIT"
@@ -8,6 +12,15 @@ requires-python = ">=3.9"
 authors = [
   { name = "Patrick Chen" }
 ]
+dependencies = [
+  "jsonschema",
+]
+
+[project.scripts]
+evidence-bound-eval = "evidence_bound_ai_evaluation_harness.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["evidence_bound_ai_evaluation_harness*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

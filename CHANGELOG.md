@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.2.0 - Lightweight CLI Validator
+
+- Added local CLI validator for single evaluation report JSON files.
+- Added package module `evidence_bound_ai_evaluation_harness`.
+- Added `python -m evidence_bound_ai_evaluation_harness validate ...`.
+- Added console script `evidence-bound-eval`.
+- Added CLI tests for valid report, schema failure, missing file, invalid JSON, missing schema, input-file preservation, subprocess module execution, and scope language.
+- Added CLI implementation documentation.
+- Existing schema validation tests continue to pass.
+- Runtime behavior added: local schema validation only.
+- No clinical correctness validation added.
+- No diagnosis, treatment, HIPAA, production, compliance, or medical-device claims added.
+
 ## v0.1.6 - Lightweight CLI Validator Planning
 
 - Added `docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_PLAN.md`.

@@ -1,5 +1,7 @@
 # v0.2.0 Lightweight CLI Validator Plan
 
+Implementation status: Implemented in v0.2.0 as a local single-report schema validator.
+
 ## Purpose
 
 The planned CLI is intended to help locally validate whether an `evaluation_report.json` file conforms to the project's JSON Schema and contains the expected reviewability fields.

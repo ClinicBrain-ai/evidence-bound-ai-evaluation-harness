@@ -83,7 +83,31 @@ Schema validation makes the evaluation report reviewable as a consistent artifac
 
 The schema does not validate clinical correctness, diagnosis, treatment, medical safety, compliance, production readiness, or medical-device functionality.
 
-- [v0.2.0 Lightweight CLI Validator Plan](docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_PLAN.md) - planning document for a future local schema validator CLI; not implemented yet.
+- [v0.2.0 Lightweight CLI Validator Plan](docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_PLAN.md) - planning document for the local schema validator CLI.
+- [v0.2.0 Lightweight CLI Validator Implementation](docs/V0_2_0_LIGHTWEIGHT_CLI_VALIDATOR_IMPLEMENTATION.md) - implementation notes and command behavior.
+
+## CLI Validator
+
+Validate a single evaluation report JSON against the project schema:
+
+```bash
+python -m evidence_bound_ai_evaluation_harness validate examples/case_001_missing_context/evaluation_report.json
+```
+
+Expected output:
+
+```text
+PASS: evaluation report conforms to schema.
+Scope: structure and reviewability only; not clinical correctness.
+```
+
+After editable install, the packaged command is also available:
+
+```bash
+evidence-bound-eval validate examples/case_001_missing_context/evaluation_report.json
+```
+
+The CLI validates JSON report structure and reviewability fields against the schema. It does not validate clinical correctness, diagnosis, treatment, medical safety, HIPAA compliance, production readiness, or medical-device functionality.
 
 ## Release Readiness
 
