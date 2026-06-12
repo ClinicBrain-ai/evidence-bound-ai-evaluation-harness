@@ -64,7 +64,7 @@ All examples are synthetic, de-identified, and healthcare-adjacent or dental-adj
 
 ## Relationship To Clinical Review Packet Toolkit
 
-The existing `evidence-bound-clinical-review-toolkit` project focuses on converting AI-generated healthcare-adjacent outputs into evidence-linked, human-reviewable Clinical Review Packets.
+The companion [Evidence-Bound Clinical Review Toolkit](https://github.com/ClinicBrain-ai/evidence-bound-clinical-review-toolkit) focuses on converting AI-generated healthcare-adjacent outputs into evidence-linked, human-reviewable Clinical Review Packets.
 
 This project focuses on the layer before that: evaluating the AI output to identify unsupported claims, missing context, uncertainty gaps, source conflicts, scope-boundary issues, and review needs.
 
@@ -76,7 +76,7 @@ AI-generated output
   -> human review decision + audit trail
 ```
 
-In short: this repository evaluates whether an AI output is ready to become a review packet; the toolkit turns bounded material into the packet reviewers inspect.
+In short: this repository evaluates whether an AI output is ready to become a review packet; the toolkit turns bounded material into the packet reviewers inspect. Both repositories stay within reviewability, evidence alignment, and human-review workflow boundaries.
 
 ## Test Instructions
 
