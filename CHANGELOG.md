@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.1.4 - 2026-06-12
+
+- Added v0.1.x release-note draft for GitHub release preparation.
+- Added release safety boundary language.
+- Linked release-readiness draft from the README.
+- Confirmed README, changelog, and pyproject metadata consistency.
+- Confirmed examples and walkthrough index links.
+- No runtime behavior added.
+- No CLI added.
+- No clinical, diagnostic, treatment, HIPAA, production, compliance, or medical-device claims added.
+
 ## v0.1.3 - 2026-06-12
 
 - Added a reviewer journey section to the README.

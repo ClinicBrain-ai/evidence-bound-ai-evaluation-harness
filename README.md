@@ -83,6 +83,10 @@ Schema validation makes the evaluation report reviewable as a consistent artifac
 
 The schema does not validate clinical correctness, diagnosis, treatment, medical safety, compliance, production readiness, or medical-device functionality.
 
+## Release Readiness
+
+See [docs/RELEASE_DRAFT_V0_1_X.md](docs/RELEASE_DRAFT_V0_1_X.md) for a GitHub release-note draft and release safety boundary for the v0.1.x foundation.
+
 ## Relationship To Clinical Review Packet Toolkit
 
 The companion [Evidence-Bound Clinical Review Toolkit](https://github.com/ClinicBrain-ai/evidence-bound-clinical-review-toolkit) focuses on converting AI-generated healthcare-adjacent outputs into evidence-linked, human-reviewable Clinical Review Packets.
