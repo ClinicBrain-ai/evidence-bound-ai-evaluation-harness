@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.5 - Portfolio Publication Record
+
+- Added `docs/PORTFOLIO_PUBLICATION_RECORD.md`.
+- Linked the publication record from README.
+- Recorded repo URL, release URL, validation status, LinkedIn copy, safety boundary, and portfolio relationship.
+- No runtime behavior added.
+- No CLI added.
+- No clinical, diagnostic, treatment, HIPAA, production, compliance, or medical-device claims added.
+
 ## v0.1.4 - 2026-06-12
 
 - Added v0.1.x release-note draft for GitHub release preparation.

@@ -87,6 +87,8 @@ The schema does not validate clinical correctness, diagnosis, treatment, medical
 
 See [docs/RELEASE_DRAFT_V0_1_X.md](docs/RELEASE_DRAFT_V0_1_X.md) for a GitHub release-note draft and release safety boundary for the v0.1.x foundation.
 
+- [Portfolio Publication Record](docs/PORTFOLIO_PUBLICATION_RECORD.md) - release, validation, LinkedIn, and portfolio-use record for v0.1.4.
+
 ## Relationship To Clinical Review Packet Toolkit
 
 The companion [Evidence-Bound Clinical Review Toolkit](https://github.com/ClinicBrain-ai/evidence-bound-clinical-review-toolkit) focuses on converting AI-generated healthcare-adjacent outputs into evidence-linked, human-reviewable Clinical Review Packets.
