@@ -1,0 +1,154 @@
+{
+  "sources": [
+    {
+      "id": "s1",
+      "visit": "V1",
+      "text": "預計下次回診拍攝 36 根尖片。"
+    },
+    {
+      "id": "s2",
+      "visit": "V2",
+      "text": "A periapical radiograph for tooth 36 was taken."
+    },
+    {
+      "id": "s3",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 46 was not taken."
+    },
+    {
+      "id": "s4",
+      "visit": "V1",
+      "text": "16 根尖片完成與否未記載。"
+    },
+    {
+      "id": "s5",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 36 was planned for the next visit."
+    },
+    {
+      "id": "s6",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 26 was taken."
+    },
+    {
+      "id": "s7",
+      "visit": "V1",
+      "text": "預計下次回診拍攝 26 根尖片。"
+    },
+    {
+      "id": "s8",
+      "visit": "V1",
+      "text": "病歷附有一張影像，未標示拍攝部位。"
+    }
+  ],
+  "claims": [
+    {
+      "id": "c01",
+      "visit": "V1",
+      "text": "下回安排拍攝 36 根尖片。",
+      "citations": ["s1"]
+    },
+    {
+      "id": "c02",
+      "visit": "V1",
+      "text": "已拍攝 36 根尖片。",
+      "citations": ["s1"]
+    },
+    {
+      "id": "c03",
+      "visit": "V2",
+      "text": "已拍攝 36 根尖片。",
+      "citations": ["s2"]
+    },
+    {
+      "id": "c04",
+      "visit": "V1",
+      "text": "已拍攝 36 根尖片。",
+      "citations": ["s2"]
+    },
+    {
+      "id": "c05",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 26 was taken.",
+      "citations": ["s6"]
+    },
+    {
+      "id": "c06",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 26 was taken.",
+      "citations": ["s7"]
+    },
+    {
+      "id": "c07",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 36 was taken.",
+      "citations": ["s6"]
+    },
+    {
+      "id": "c08",
+      "visit": "V1",
+      "text": "尚未拍攝 46 根尖片。",
+      "citations": ["s3"]
+    },
+    {
+      "id": "c09",
+      "visit": "V1",
+      "text": "46 根尖片完成與否未記載。",
+      "citations": ["s3"]
+    },
+    {
+      "id": "c10",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 16 was not taken.",
+      "citations": ["s4"]
+    },
+    {
+      "id": "c11",
+      "visit": "V1",
+      "text": "Completion of the periapical radiograph for tooth 16 was not documented.",
+      "citations": ["s4"]
+    },
+    {
+      "id": "c12",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 26 was taken.",
+      "citations": ["s6", "s7"]
+    },
+    {
+      "id": "c13",
+      "visit": "V1",
+      "text": "下回安排拍攝 36 根尖片。",
+      "citations": ["s1", "s5"]
+    },
+    {
+      "id": "c14",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 26 was taken.",
+      "citations": []
+    },
+    {
+      "id": "c15",
+      "visit": "V1",
+      "text": "下回安排拍攝 36 根尖片。",
+      "citations": ["s1", "s99"]
+    },
+    {
+      "id": "c16",
+      "visit": "V1",
+      "text": "The patient asked about the cost of taking an image at the next visit.",
+      "citations": ["s1"]
+    },
+    {
+      "id": "c17",
+      "visit": "V1",
+      "text": "已拍攝 37 根尖片。",
+      "citations": ["s8"]
+    },
+    {
+      "id": "c18",
+      "visit": "V1",
+      "text": "下回安排拍攝 36 根尖片。",
+      "citations": ["s1", "s2"]
+    }
+  ]
+}

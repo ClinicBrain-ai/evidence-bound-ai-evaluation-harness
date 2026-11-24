@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.0 - Cited imaging-status checks
+
+- Add `check PACKET [--json]` for local comparison of synthetic English and Traditional Chinese imaging claims with cited notes.
+- Report parsed documentation states, visit/tooth mismatches, missing or conflicting references and wording that needs a reviewer.
+- Add an 18-claim contrast set with independent label storage and a reproducible citation-ID comparison.
+- Bundle the existing report schema for console and module validation from an installed wheel.
+
 ## v0.2.0 - Lightweight CLI Validator
 
 - Added local CLI validator for single evaluation report JSON files.
