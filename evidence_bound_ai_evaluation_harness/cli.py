@@ -2,11 +2,13 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 from typing import List, Optional, Tuple
 
 import jsonschema
 
 from .fidelity import check_packet
+from .review_html import render_review
 
 
 SCOPE_MESSAGE = "Scope: structure and reviewability only; not clinical correctness."
@@ -72,6 +74,22 @@ def validate_report(
     )
 
 
+def write_review(document: str, output: Path, packet_path: Path) -> None:
+    if output.resolve() == packet_path.resolve() or (
+        output.exists() and output.samefile(packet_path)
+    ):
+        raise ValueError("Choose an output file distinct from the input packet.")
+    temporary = None
+    try:
+        with NamedTemporaryFile(dir=output.parent, delete=False) as handle:
+            temporary = Path(handle.name)
+            handle.write(document.encode("utf-8"))
+        temporary.replace(output)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="evidence-bound-eval",
@@ -97,6 +115,14 @@ def build_parser() -> argparse.ArgumentParser:
     check_parser.add_argument("packet_path", type=Path, help="Path to a fidelity packet JSON.")
     check_parser.add_argument("--json", action="store_true", help="Write the complete result as JSON.")
 
+    review_parser = subparsers.add_parser(
+        "review", help="Write an offline bilingual reviewer report to standard output."
+    )
+    review_parser.add_argument("packet_path", type=Path, help="Path to a synthetic fidelity packet.")
+
+    review_parser.add_argument(
+        "-o", "--output", type=Path, help="Write an HTML file (default: standard output)."
+    )
     return parser
 
 
@@ -109,11 +135,18 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(output)
         return exit_code
 
-    if args.command == "check":
+    if args.command in {"check", "review"}:
         try:
             with args.packet_path.open(encoding="utf-8") as handle:
                 packet = json.load(handle, object_pairs_hook=_unique_fields)
             result = check_packet(packet)
+            if args.command == "review":
+                document = render_review(result)
+                if args.output is None:
+                    sys.stdout.buffer.write(document.encode("utf-8"))
+                else:
+                    write_review(document, args.output, args.packet_path)
+                return 0
         except (OSError, ValueError) as error:
             print(f"ERROR: {error}", file=sys.stderr)
             return 2
