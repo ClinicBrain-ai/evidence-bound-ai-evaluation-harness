@@ -6,7 +6,7 @@ Evidence-Bound AI Evaluation Harness is a portfolio-grade prototype for evaluati
 
 [Start the 3-minute walkthrough · 三分鐘案例試用](docs/try-it.md). Read a synthetic note, decide whether the summary is supported, then reveal the reviewer's explanation in GitHub. No account or Python installation is needed to read the public examples.
 
-[Download the bilingual offline report · 下載離線覆核範例](https://github.com/ClinicBrain-ai/evidence-bound-ai-evaluation-harness/raw/refs/heads/main/docs/review-example.html). Save the HTML and open it in a browser to inspect all 18 claims and their citations. The report works offline. It contains the original text of every claim and each excerpt it cites; use synthetic data in shared examples.
+[Download the bilingual offline report · 下載離線覆核範例](docs/review-example.html?raw=true). Save the HTML and open it in a browser to inspect all 18 claims and their citations. The report works offline. It contains the original text of every claim and each excerpt it cites; use synthetic data in shared examples.
 
 To share a report for **your own synthetic packet**, install the project as shown below and run the following command. Send the resulting file to a reviewer who can read it locally on their device.
 
