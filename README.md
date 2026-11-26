@@ -2,6 +2,20 @@
 
 Evidence-Bound AI Evaluation Harness is a portfolio-grade prototype for evaluating AI-generated healthcare-adjacent outputs against source evidence, missing context, uncertainty handling, scope boundaries, and human-review needs.
 
+## Try it on your phone · 手機試用
+
+[Start the 3-minute walkthrough · 三分鐘案例試用](docs/try-it.md). Read a synthetic note, decide whether the summary is supported, then reveal the reviewer's explanation in GitHub. No account or Python installation is needed to read the public examples.
+
+[Download the bilingual offline report · 下載離線覆核範例](docs/review-example.html?raw=true). Save the HTML and open it in a browser to inspect all 18 claims and their citations. The report works offline. It contains the original text of every claim and each excerpt it cites; use synthetic data in shared examples.
+
+To share a report for **your own synthetic packet**, install the project as shown below and run the following command. Send the resulting file to a reviewer who can read it locally on their device.
+
+```bash
+python -m evidence_bound_ai_evaluation_harness review your-packet.json -o review.html
+```
+
+A completed export exits with code 0, including when claims need review. The `check` command below returns a review-sensitive exit code for automated workflows.
+
 ## 60-Second View
 
 - Reviews AI outputs against bounded source packets.
@@ -9,6 +23,63 @@ Evidence-Bound AI Evaluation Harness is a portfolio-grade prototype for evaluati
 - Produces schema-validated evaluation reports for human-review routing.
 - Uses only synthetic examples.
 - Evaluates reviewability and evidence alignment, not clinical correctness.
+
+## Try the cited imaging-status check (v0.3.0)
+
+A synthetic note says **預計下次回診拍攝 36 根尖片。** (planned for the next visit).
+A summary cites that exact note and says **已拍攝 36 根尖片。** (already taken).
+The source ID exists. The wording changes the documented status of the event.
+The `check` command reads the two sentences and routes that claim to review.
+
+From the repository root, with Python 3.9 or later:
+
+```bash
+python -m pip install -e .
+python -m evidence_bound_ai_evaluation_harness check benchmarks/temporal_fidelity/packet.json --json
+```
+
+The example intentionally exits with **1** because 12 of its 18 claims need review.
+Each result includes the claim, its visit, its normalized event and state, every cited excerpt,
+and the reason for the decision. Omit `--json` for a short per-claim summary.
+Exit **0** means all claims matched on the checked dimensions; **2** means the input could not be read or validated.
+
+### What a packet contains
+
+```json
+{
+  "sources": [{"id": "S1", "visit": "V1", "text": "預計下次回診拍攝 36 根尖片。"}],
+  "claims": [{"id": "C1", "visit": "V1", "text": "已拍攝 36 根尖片。", "citations": ["S1"]}]
+}
+```
+
+This returns `needs_review / status_mismatch`: the claim is `completed`; source S1 is `planned`.
+Replace the claim text with `下回安排拍攝 36 根尖片。` and the result becomes `matched / status_match`.
+Visit IDs refer to the encounter whose documentation is being summarized. A note from V2
+cannot prove that an event was already complete as documented at V1. The caller supplies
+these IDs and the citations. Multiple cited notes must agree on visit, tooth and status.
+Uncited notes are outside the check, even when their wording would support the claim.
+
+[Beyond the nine templates · 中英文改寫挑戰](benchmarks/imaging_wording/README.md) measures false passes, extra reviews and parsed coverage on separately labeled examples.
+
+### Run the contrast set
+
+```bash
+python -m benchmarks.temporal_fidelity.score
+```
+
+| Check on the 18 synthetic claims | Incorrectly passed | Unnecessarily sent to review | Decisions agreeing with the fixture labels |
+| --- | ---: | ---: | ---: |
+| Nonempty citations, all IDs exist | 10 | 0 | 8/18 |
+| Cited imaging-status check | 0 | 0 | 18/18 |
+
+The ID-only rule is a comparison baseline. The original `validate` command checks a different artifact: a reviewer-authored report against its schema. Expected labels live in [expected.json](benchmarks/temporal_fidelity/expected.json), separate from the [input packet](benchmarks/temporal_fidelity/packet.json). The set includes planned/completed, not done/documentation unknown, a later visit, a different tooth, conflicts, and unsupported wording.
+
+This is a deterministic, local check for a closed set of English and Traditional Chinese
+sentences about permanent-tooth periapical imaging. It compares four documentation
+states: `planned`, `completed`, `not_done`, and `unknown`. The [recognizer](evidence_bound_ai_evaluation_harness/event_text.py)
+lists all nine sentence templates. Unrecognized wording routes to human review. A match
+applies only to the cited event, visit and status. These fixture results do not estimate
+performance on free-text clinical notes or establish that the event occurred.
 
 ## Hiring Signal
 
@@ -139,7 +210,7 @@ python3 -m pip install -r requirements-dev.txt
 python3 -m pytest
 ```
 
-The tests validate example evaluation reports against the JSON Schema. They do not test clinical correctness.
+The tests exercise report validation, sentence recognition, the CLI and synthetic citation comparisons. To reproduce the labeled contrast set separately, run the scoring command above.
 
 ## Safety Boundary
 

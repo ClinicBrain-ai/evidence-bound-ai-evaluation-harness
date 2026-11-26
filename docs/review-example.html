@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>根尖片紀錄核對 · Imaging status review</title>
+  <style>
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0; background: #f5f5f0; color: #192d30; font: 1rem/1.55
+    "Source Sans 3", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  overflow-wrap: anywhere;
+}
+main { max-width: 58rem; margin: 0 auto; padding: 2.5rem clamp(1rem, 4vw, 3rem) 4rem; }
+header { padding: 1.3rem 0 1.1rem; border-top: 4px solid #27615a; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.65rem); line-height: 1.2; }
+h1 [lang=en] { display: block; margin-top: .3rem; font-size: .57em; font-weight: 500; }
+header p { margin-top: .9rem; color: #405659; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+nav a { padding: .5rem .8rem; border: 1px solid #8b9c97; border-radius: .4rem;
+  background: white; color: #194c46; font-weight: 600; text-underline-offset: .16em; }
+nav a:hover, summary:hover { background: #edf3ef; }
+nav strong { margin-left: .45rem; }
+nav > span { margin-inline-start: auto; color: #405659; }
+:focus-visible { outline: 3px solid #206499; outline-offset: 2px; }
+section { margin-top: 2.1rem; }
+h2 { font-size: 1.3rem; margin-bottom: .6rem; }
+.english { margin-inline-start: .35em; font-weight: normal; }
+details { margin: .65rem 0; background: white; border: 1px solid #bac7c0; border-radius: .5rem; }
+details.needs_review { border-inline-start: .25rem solid #975415; }
+summary { padding: .85rem 1rem; cursor: pointer; border-radius: .45rem; }
+summary::marker { color: #42645c; }
+.meta { font-size: .9rem; color: #384d50; }
+.meta > span { display: inline-block; margin-inline-end: .85rem; }
+.claim-text { display: block; margin: .4rem 0 0; font-size: 1.12rem; font-weight: 650; }
+.original { white-space: pre-wrap; }
+.body { padding: .8rem 1rem 1.1rem; border-top: 1px solid #dce3df; }
+code { font: .9em "IBM Plex Mono", ui-monospace, monospace; }
+.event { margin: .3rem 0 .65rem; color: #384d50; font-size: .92rem; }
+.reason { margin: .7rem 0 1rem; padding: .65rem .8rem; background: #eef3ef; border-radius: .3rem; }
+.reason p[lang=en] { color: #384d50; }
+.reason code { display: block; margin-top: .3rem; color: #435a56; }
+h3 { font-size: 1rem; }
+ul { list-style: none; margin: .45rem 0 0; padding: 0; }
+li { border-inline-start: 2px solid #9bafa8; margin-top: .65rem; padding-inline-start: .75rem; }
+li .original { margin-top: .15rem; }
+@media (max-width: 36rem) {
+  main { padding-top: 1rem; }
+  nav > span { width: 100%; margin: 0; }
+  section { margin-top: 1.5rem; }
+}
+@media print {
+  @page { margin: 15mm; }
+  body { background: white; color: black; font-size: 10pt; }
+  main { max-width: none; margin: 0; padding: 0; }
+  header { padding: .5rem 0; } nav a { display: none; } nav > span { margin: 0; }
+  h2, h3, summary { break-after: avoid; }
+  details::details-content { content-visibility: visible; display: block; }
+  details, details.needs_review { border: 0; border-top: 1px solid #999; border-radius: 0; }
+  summary { display: block; padding: .6rem 0; }
+  .body { padding: 0 0 .8rem; border: 0; }
+  .reason { padding: 0; background: transparent; }
+  li { break-inside: avoid; }
+}
+</style>
+</head>
+<body><main>
+  <header><h1>根尖片紀錄核對 <span lang="en">Imaging status review</span></h1>
+    <p>本報告以合成資料核對陳述與引用紀錄中的就診、牙位及拍攝狀態。<br>
+    <span lang="en">This synthetic document comparison checks each claim against its cited notes for the visit, tooth and documented imaging status.</span></p>
+  </header>
+  <nav aria-label="按結果瀏覽 · Browse by outcome"><a href="#needs_review">需覆核 <span class="english" lang="en">Needs review</span><strong>12</strong></a> <a href="#matched">紀錄相符 <span class="english" lang="en">Matched</span><strong>6</strong></a>
+    <span>陳述總數 <span class="english" lang="en">Total claims</span> <strong>18</strong></span>
+  </nav>
+  <section id="needs_review"><h2>需覆核 <span class="english" lang="en">Needs review</span></h2>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c02</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">已拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>陳述與引用來源記載的拍攝狀態不同。</p><p lang="en">The claim gives a different imaging status from the cited notes.</p>
+      <code>status_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s1</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 36 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c04</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">已拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>至少一筆引用來源的就診編號與陳述不同。</p><p lang="en">At least one cited note belongs to a different visit from the claim.</p>
+      <code>visit_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s2</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V2</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 36 was taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c06</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">A periapical radiograph for tooth 26 was taken.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>陳述與引用來源記載的拍攝狀態不同。</p><p lang="en">The claim gives a different imaging status from the cited notes.</p>
+      <code>status_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s7</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 26 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c07</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">A periapical radiograph for tooth 36 was taken.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>至少一筆引用來源所指的根尖片牙位與陳述不同。</p><p lang="en">At least one cited note describes a periapical image of a different tooth.</p>
+      <code>event_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s6</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 26 was taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c09</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">46 根尖片完成與否未記載。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:46</code> · 完成與否未記載 <span class="english" lang="en">Completion undocumented</span> (<code>unknown</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>陳述與引用來源記載的拍攝狀態不同。</p><p lang="en">The claim gives a different imaging status from the cited notes.</p>
+      <code>status_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s3</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 46 was not taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:46</code> · 尚未拍攝 <span class="english" lang="en">Not taken</span> (<code>not_done</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c10</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">A periapical radiograph for tooth 16 was not taken.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:16</code> · 尚未拍攝 <span class="english" lang="en">Not taken</span> (<code>not_done</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>陳述與引用來源記載的拍攝狀態不同。</p><p lang="en">The claim gives a different imaging status from the cited notes.</p>
+      <code>status_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s4</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">16 根尖片完成與否未記載。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:16</code> · 完成與否未記載 <span class="english" lang="en">Completion undocumented</span> (<code>unknown</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c12</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">A periapical radiograph for tooth 26 was taken.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>引用來源對同次就診、同一牙位的拍攝狀態有不同記載。</p><p lang="en">The cited notes give different imaging statuses for the same tooth and visit.</p>
+      <code>conflicting_sources</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s6</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 26 was taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p></li><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s7</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 26 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c14</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">A periapical radiograph for tooth 26 was taken.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>這項陳述沒有列出引用來源。</p><p lang="en">The claim lists no source to check.</p>
+      <code>no_citation</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><p>未列引用來源 <span class="english" lang="en">No sources cited</span></p>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c15</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">下回安排拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>至少一個引用的來源編號在這份資料中找不到。</p><p lang="en">At least one cited source ID is missing from the packet.</p>
+      <code>unknown_citation</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s1</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 36 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s99</bdi></code></span></p><p>找不到此來源 <span class="english" lang="en">Source not found</span></p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c16</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">The patient asked about the cost of taking an image at the next visit.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · 無法辨識句型 <span class="english" lang="en">Wording unrecognized</span></p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>核對工具無法從陳述的句型辨識牙位與拍攝狀態。</p><p lang="en">The checker could not read the tooth and imaging status from the claim’s wording.</p>
+      <code>unrecognized_claim</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s1</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 36 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c17</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">已拍攝 37 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:37</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>核對工具無法從至少一筆引用來源的句型辨識牙位與拍攝狀態。</p><p lang="en">The checker could not read the tooth and imaging status from at least one cited note.</p>
+      <code>unrecognized_source</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s8</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">病歷附有一張影像，未標示拍攝部位。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · 無法辨識句型 <span class="english" lang="en">Wording unrecognized</span></p></li></ul>
+  </div>
+</details>
+<details class="needs_review" open>
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c18</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>需覆核 <span class="english" lang="en">Needs review</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">下回安排拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>至少一筆引用來源的就診編號與陳述不同。</p><p lang="en">At least one cited note belongs to a different visit from the claim.</p>
+      <code>visit_mismatch</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s1</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 36 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s2</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V2</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 36 was taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p></li></ul>
+  </div>
+</details></section><section id="matched"><h2>紀錄相符 <span class="english" lang="en">Matched</span></h2>
+<details class="matched">
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c01</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>紀錄相符 <span class="english" lang="en">Matched</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">下回安排拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>所有引用來源都記載了相同的就診、牙位及拍攝狀態，與陳述一致。</p><p lang="en">Every cited note agrees with the claim on the visit, tooth and imaging status.</p>
+      <code>status_match</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s1</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 36 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li></ul>
+  </div>
+</details>
+<details class="matched">
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c03</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V2</bdi></code></span>
+      <span>紀錄相符 <span class="english" lang="en">Matched</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">已拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>所有引用來源都記載了相同的就診、牙位及拍攝狀態，與陳述一致。</p><p lang="en">Every cited note agrees with the claim on the visit, tooth and imaging status.</p>
+      <code>status_match</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s2</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V2</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 36 was taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p></li></ul>
+  </div>
+</details>
+<details class="matched">
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c05</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>紀錄相符 <span class="english" lang="en">Matched</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">A periapical radiograph for tooth 26 was taken.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>所有引用來源都記載了相同的就診、牙位及拍攝狀態，與陳述一致。</p><p lang="en">Every cited note agrees with the claim on the visit, tooth and imaging status.</p>
+      <code>status_match</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s6</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 26 was taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:26</code> · 已拍攝 <span class="english" lang="en">Completed</span> (<code>completed</code>)</p></li></ul>
+  </div>
+</details>
+<details class="matched">
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c08</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>紀錄相符 <span class="english" lang="en">Matched</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">尚未拍攝 46 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:46</code> · 尚未拍攝 <span class="english" lang="en">Not taken</span> (<code>not_done</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>所有引用來源都記載了相同的就診、牙位及拍攝狀態，與陳述一致。</p><p lang="en">Every cited note agrees with the claim on the visit, tooth and imaging status.</p>
+      <code>status_match</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s3</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 46 was not taken.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:46</code> · 尚未拍攝 <span class="english" lang="en">Not taken</span> (<code>not_done</code>)</p></li></ul>
+  </div>
+</details>
+<details class="matched">
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c11</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>紀錄相符 <span class="english" lang="en">Matched</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">Completion of the periapical radiograph for tooth 16 was not documented.</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:16</code> · 完成與否未記載 <span class="english" lang="en">Completion undocumented</span> (<code>unknown</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>所有引用來源都記載了相同的就診、牙位及拍攝狀態，與陳述一致。</p><p lang="en">Every cited note agrees with the claim on the visit, tooth and imaging status.</p>
+      <code>status_match</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s4</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">16 根尖片完成與否未記載。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:16</code> · 完成與否未記載 <span class="english" lang="en">Completion undocumented</span> (<code>unknown</code>)</p></li></ul>
+  </div>
+</details>
+<details class="matched">
+  <summary>
+    <span class="meta">
+      <span>陳述 <span class="english" lang="en">Claim</span> <code><bdi>c13</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span>
+      <span>紀錄相符 <span class="english" lang="en">Matched</span></span>
+    </span>
+    <span class="claim-text original" dir="auto">下回安排拍攝 36 根尖片。</span>
+  </summary>
+  <div class="body">
+    <p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p>
+    <div class="reason">
+      <h3>核對原因 <span class="english" lang="en">Reason</span></h3><p>所有引用來源都記載了相同的就診、牙位及拍攝狀態，與陳述一致。</p><p lang="en">Every cited note agrees with the claim on the visit, tooth and imaging status.</p>
+      <code>status_match</code>
+    </div>
+    <h3>引用來源 <span class="english" lang="en">Cited sources</span></h3><ul><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s1</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">預計下次回診拍攝 36 根尖片。</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li><li><p class="meta"><span>來源 <span class="english" lang="en">Source</span> <code><bdi>s5</bdi></code></span> <span>就診 <span class="english" lang="en">Visit</span> <code><bdi>V1</bdi></code></span></p><p class="original" dir="auto">A periapical radiograph for tooth 36 was planned for the next visit.</p><p class="event">辨識結果 <span class="english" lang="en">Parsed event</span> · <code>pa:36</code> · 計畫拍攝 <span class="english" lang="en">Planned</span> (<code>planned</code>)</p></li></ul>
+  </div>
+</details></section>
+</main></body></html>

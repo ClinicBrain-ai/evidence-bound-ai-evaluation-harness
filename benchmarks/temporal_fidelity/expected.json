@@ -1,0 +1,20 @@
+{
+  "c01": "status_match",
+  "c02": "status_mismatch",
+  "c03": "status_match",
+  "c04": "visit_mismatch",
+  "c05": "status_match",
+  "c06": "status_mismatch",
+  "c07": "event_mismatch",
+  "c08": "status_match",
+  "c09": "status_mismatch",
+  "c10": "status_mismatch",
+  "c11": "status_match",
+  "c12": "conflicting_sources",
+  "c13": "status_match",
+  "c14": "no_citation",
+  "c15": "unknown_citation",
+  "c16": "unrecognized_claim",
+  "c17": "unrecognized_source",
+  "c18": "visit_mismatch"
+}

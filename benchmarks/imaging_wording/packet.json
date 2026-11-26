@@ -1,0 +1,153 @@
+{
+  "sources": [
+    {
+      "id": "z1",
+      "visit": "V1",
+      "text": "36 根尖片排在下次回診拍。"
+    },
+    {
+      "id": "z2",
+      "visit": "V1",
+      "text": "今日已完成 46 根尖片拍攝。"
+    },
+    {
+      "id": "z3",
+      "visit": "V1",
+      "text": "病歷沒有寫 16 根尖片到底有沒有拍。"
+    },
+    {
+      "id": "e1",
+      "visit": "V1",
+      "text": "No periapical image of tooth 24 was acquired today."
+    },
+    {
+      "id": "e2",
+      "visit": "V1",
+      "text": "The PA for tooth 11 is booked for the next visit."
+    },
+    {
+      "id": "e3",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 37 was taken."
+    },
+    {
+      "id": "control",
+      "visit": "V1",
+      "text": "已拍攝 22 根尖片。"
+    }
+  ],
+  "claims": [
+    {
+      "id": "z1-a",
+      "visit": "V1",
+      "text": "下次回診才安排拍 36 根尖片。",
+      "citations": [
+        "z1"
+      ]
+    },
+    {
+      "id": "z1-b",
+      "visit": "V1",
+      "text": "36 根尖片這次就拍好了。",
+      "citations": [
+        "z1"
+      ]
+    },
+    {
+      "id": "z2-a",
+      "visit": "V1",
+      "text": "已拍攝 46 根尖片。",
+      "citations": [
+        "z2"
+      ]
+    },
+    {
+      "id": "z2-b",
+      "visit": "V1",
+      "text": "已拍攝 45 根尖片。",
+      "citations": [
+        "z2"
+      ]
+    },
+    {
+      "id": "z3-a",
+      "visit": "V1",
+      "text": "16 根尖片完成與否未記載。",
+      "citations": [
+        "z3"
+      ]
+    },
+    {
+      "id": "z3-b",
+      "visit": "V1",
+      "text": "尚未拍攝 16 根尖片。",
+      "citations": [
+        "z3"
+      ]
+    },
+    {
+      "id": "e1-a",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 24 was not taken.",
+      "citations": [
+        "e1"
+      ]
+    },
+    {
+      "id": "e1-b",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 24 was taken.",
+      "citations": [
+        "e1"
+      ]
+    },
+    {
+      "id": "e2-a",
+      "visit": "V1",
+      "text": "The plan is to obtain a periapical image of tooth 11 next visit.",
+      "citations": [
+        "e2"
+      ]
+    },
+    {
+      "id": "e2-b",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 11 was taken.",
+      "citations": [
+        "e2"
+      ]
+    },
+    {
+      "id": "e3-a",
+      "visit": "V1",
+      "text": "The periapical image of tooth 37 was acquired today.",
+      "citations": [
+        "e3"
+      ]
+    },
+    {
+      "id": "e3-b",
+      "visit": "V1",
+      "text": "The periapical image of tooth 37 was only requested.",
+      "citations": [
+        "e3"
+      ]
+    },
+    {
+      "id": "control-a",
+      "visit": "V1",
+      "text": "A periapical radiograph for tooth 22 was taken.",
+      "citations": [
+        "control"
+      ]
+    },
+    {
+      "id": "control-b",
+      "visit": "V1",
+      "text": "尚未拍攝 22 根尖片。",
+      "citations": [
+        "control"
+      ]
+    }
+  ]
+}
