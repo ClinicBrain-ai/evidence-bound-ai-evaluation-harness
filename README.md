@@ -59,6 +59,8 @@ cannot prove that an event was already complete as documented at V1. The caller 
 these IDs and the citations. Multiple cited notes must agree on visit, tooth and status.
 Uncited notes are outside the check, even when their wording would support the claim.
 
+[Beyond the nine templates · 中英文改寫挑戰](benchmarks/imaging_wording/README.md) measures false passes, extra reviews and parsed coverage on separately labeled examples.
+
 ### Run the contrast set
 
 ```bash

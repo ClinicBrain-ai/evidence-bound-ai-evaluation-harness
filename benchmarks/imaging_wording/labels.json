@@ -1,0 +1,72 @@
+{
+  "z1-a": {
+    "supported": true,
+    "group": "challenge",
+    "rationale": "The source schedules the image for the next visit."
+  },
+  "z1-b": {
+    "supported": false,
+    "group": "challenge",
+    "rationale": "The source schedules the image for the next visit."
+  },
+  "z2-a": {
+    "supported": true,
+    "group": "challenge",
+    "rationale": "The documented completed image is for tooth 46."
+  },
+  "z2-b": {
+    "supported": false,
+    "group": "challenge",
+    "rationale": "The documented completed image is for tooth 46."
+  },
+  "z3-a": {
+    "supported": true,
+    "group": "challenge",
+    "rationale": "Silence about completion does not document a negative."
+  },
+  "z3-b": {
+    "supported": false,
+    "group": "challenge",
+    "rationale": "Silence about completion does not document a negative."
+  },
+  "e1-a": {
+    "supported": true,
+    "group": "challenge",
+    "rationale": "The source explicitly records non-completion."
+  },
+  "e1-b": {
+    "supported": false,
+    "group": "challenge",
+    "rationale": "The source explicitly records non-completion."
+  },
+  "e2-a": {
+    "supported": true,
+    "group": "challenge",
+    "rationale": "A booking records a plan only."
+  },
+  "e2-b": {
+    "supported": false,
+    "group": "challenge",
+    "rationale": "A booking records a plan only."
+  },
+  "e3-a": {
+    "supported": true,
+    "group": "challenge",
+    "rationale": "The source documents completion in this encounter."
+  },
+  "e3-b": {
+    "supported": false,
+    "group": "challenge",
+    "rationale": "The source documents completion in this encounter."
+  },
+  "control-a": {
+    "supported": true,
+    "group": "control",
+    "rationale": "Cross-language positive and negative controls use the original vocabulary."
+  },
+  "control-b": {
+    "supported": false,
+    "group": "control",
+    "rationale": "Cross-language positive and negative controls use the original vocabulary."
+  }
+}

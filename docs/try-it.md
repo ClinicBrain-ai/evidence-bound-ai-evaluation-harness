@@ -87,3 +87,5 @@ A periapical radiograph for tooth 16 was not taken.<br>
 離線報告收錄全部 18 句摘要和它們引用的原文。儲存 HTML 後即可用瀏覽器開啟。Save the HTML report to inspect all 18 claims and their cited notes offline. [下載覆核報告 · Download the HTML report](review-example.html?raw=true)
 
 想補一題？請提供一則自編的引用紀錄、一句摘要、各自的就診代號，及你預期的結果。To suggest a case, share one invented note, one summary, their visit IDs, and your expected decision. [提交案例 · Suggest a case](https://github.com/ClinicBrain-ai/evidence-bound-ai-evaluation-harness/issues)
+
+[試試不同寫法 · Try a differently worded note](../benchmarks/imaging_wording/README.md)。看實際有幾句需要多一次人工覆核。
